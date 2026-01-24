@@ -7,6 +7,6 @@ import net.minecraft.world.level.Level;
 
 public class SpeckledPigeonEntity extends AbstractPigeonEntity {
     public SpeckledPigeonEntity(EntityType<? extends TamableAnimal> entityType, Level level) {
-        super(entityType, level, "speckled_pigeon_death", "speckled_pigeon_coo", PigeonType.SPECKLED_PIGEON);
+        super(entityType, level, PigeonType.SPECKLED_PIGEON);
     }
 }

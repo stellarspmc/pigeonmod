@@ -7,6 +7,6 @@ import net.minecraft.world.level.Level;
 
 public class WoodPigeonEntity extends AbstractPigeonEntity {
     public WoodPigeonEntity(EntityType<? extends TamableAnimal> entityType, Level level) {
-        super(entityType, level, "pigeon_death", "wood_pigeon_death", PigeonType.WOOD_PIGEON);
+        super(entityType, level, PigeonType.WOOD_PIGEON);
     }
 }

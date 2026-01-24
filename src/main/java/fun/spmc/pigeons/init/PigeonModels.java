@@ -7,7 +7,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 
 @EventBusSubscriber( value = {Dist.CLIENT} )
-public class PigeonsModModels {
+public class PigeonModels {
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(DiamondDoveModel.LAYER_LOCATION, DiamondDoveModel::createBodyLayer);

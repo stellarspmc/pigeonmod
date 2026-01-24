@@ -13,17 +13,17 @@ public class PigeonsModTabs {
 
     static {
         REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, "pigeons");
-        PIGEONS = REGISTRY.register("pigeons", () -> CreativeModeTab.builder().title(Component.translatable("item_group.pigeons.pigeons")).icon(() -> new ItemStack(PigeonsModItems.PIGEON_SPAWN_EGG.get())).displayItems((parameters, output) -> {
-            output.accept(PigeonsModItems.PIGEON_SPAWN_EGG.get());
-            output.accept(PigeonsModItems.ARCHANGEL_PIGEON_SPAWN_EGG.get());
-            output.accept(PigeonsModItems.WOOD_PIGEON_SPAWN_EGG.get());
-            output.accept(PigeonsModItems.EURASIAN_COLLARED_DOVE_SPAWN_EGG.get());
-            output.accept(PigeonsModItems.MOURNING_DOVE_SPAWN_EGG.get());
-            output.accept(PigeonsModItems.WESTERN_CROWNED_PIGEON_SPAWN_EGG.get());
-            output.accept(PigeonsModItems.KERERU_SPAWN_EGG.get());
-            output.accept(PigeonsModItems.SPECKLED_PIGEON_SPAWN_EGG.get());
-            output.accept(PigeonsModItems.DIAMOND_DOVE_SPAWN_EGG.get());
-            output.accept(PigeonsModItems.EMERALD_DOVE_SPAWN_EGG.get());
+        PIGEONS = REGISTRY.register("pigeons", () -> CreativeModeTab.builder().title(Component.translatable("item_group.pigeons.pigeons")).icon(() -> new ItemStack(PigeonItems.PIGEON_SPAWN_EGG.get())).displayItems((parameters, output) -> {
+            output.accept(PigeonItems.PIGEON_SPAWN_EGG.get());
+            output.accept(PigeonItems.ARCHANGEL_PIGEON_SPAWN_EGG.get());
+            output.accept(PigeonItems.WOOD_PIGEON_SPAWN_EGG.get());
+            output.accept(PigeonItems.EURASIAN_COLLARED_DOVE_SPAWN_EGG.get());
+            output.accept(PigeonItems.MOURNING_DOVE_SPAWN_EGG.get());
+            output.accept(PigeonItems.WESTERN_CROWNED_PIGEON_SPAWN_EGG.get());
+            output.accept(PigeonItems.KERERU_SPAWN_EGG.get());
+            output.accept(PigeonItems.SPECKLED_PIGEON_SPAWN_EGG.get());
+            output.accept(PigeonItems.DIAMOND_DOVE_SPAWN_EGG.get());
+            output.accept(PigeonItems.EMERALD_DOVE_SPAWN_EGG.get());
         }).build());
     }
 }

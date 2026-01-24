@@ -17,7 +17,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.function.Supplier;
 
 @EventBusSubscriber()
-public class PigeonsModEntities {
+public class PigeonEntities {
     public static final DeferredRegister<EntityType<?>> REGISTRY;
     public static final Supplier<EntityType<PigeonEntity>> PIGEON;
     public static final Supplier<EntityType<WoodPigeonEntity>> WOOD_PIGEON;

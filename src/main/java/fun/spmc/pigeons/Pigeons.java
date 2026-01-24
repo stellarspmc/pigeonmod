@@ -9,9 +9,9 @@ import net.neoforged.fml.common.Mod;
 public class Pigeons {
     public static final String MODID = "pigeons";
     public Pigeons(IEventBus modEventBus) {
-        PigeonsModSounds.REGISTRY.register(modEventBus);
-        PigeonsModItems.REGISTRY.register(modEventBus);
-        PigeonsModEntities.REGISTRY.register(modEventBus);
+        PigeonSoundEvents.REGISTRY.register(modEventBus);
+        PigeonItems.REGISTRY.register(modEventBus);
+        PigeonEntities.REGISTRY.register(modEventBus);
         PigeonsModTabs.REGISTRY.register(modEventBus);
     }
 

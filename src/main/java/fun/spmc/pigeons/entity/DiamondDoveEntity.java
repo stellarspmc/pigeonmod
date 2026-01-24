@@ -7,6 +7,6 @@ import net.minecraft.world.level.Level;
 
 public class DiamondDoveEntity extends AbstractPigeonEntity {
     public DiamondDoveEntity(EntityType<? extends TamableAnimal> entityType, Level level) {
-        super(entityType, level, "diamond_dove_death", "diamond_dove_coo", PigeonType.DIAMOND_DOVE);
+        super(entityType, level, PigeonType.DIAMOND_DOVE);
     }
 }
