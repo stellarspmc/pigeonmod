@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": {
+    "type": "forge:any"
+  },
+  "spawners": {
+    "type": "pigeons:kereru_baby",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

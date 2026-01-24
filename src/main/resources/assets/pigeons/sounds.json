@@ -1,0 +1,155 @@
+{
+  "common_pigeon_cooing": {
+    "subtitle": "subtitles.common_pigeon_cooing",
+    "sounds": [
+      {
+        "name": "pigeons:pigeon_sound",
+        "stream": false
+      }
+    ]
+  },
+  "common_pigeon_death": {
+    "subtitle": "subtitles.common_pigeon_death",
+    "sounds": [
+      {
+        "name": "pigeons:pigeon_death_sound",
+        "stream": false
+      }
+    ]
+  },
+  "wood_pigeon_sound": {
+    "subtitle": "subtitles.wood_pigeon_sound",
+    "sounds": [
+      {
+        "name": "pigeons:wood_pigeon_sound",
+        "stream": false
+      }
+    ]
+  },
+  "ecd_sound": {
+    "subtitle": "subtitles.ecd_sound",
+    "sounds": [
+      {
+        "name": "pigeons:eurasian_collared_dove_sound",
+        "stream": false
+      }
+    ]
+  },
+  "mourning_dove_sound": {
+    "subtitle": "subtitles.mourning_dove_sound",
+    "sounds": [
+      {
+        "name": "pigeons:mourning_pigeon_sound",
+        "stream": false
+      }
+    ]
+  },
+  "mourning_dove_death": {
+    "subtitle": "subtitles.mourning_dove_death",
+    "sounds": [
+      {
+        "name": "pigeons:mourning_pigeon_death",
+        "stream": false
+      }
+    ]
+  },
+  "western_crowned_pigeon_sound": {
+    "subtitle": "subtitles.western_crowned_pigeon_sound",
+    "sounds": [
+      {
+        "name": "pigeons:western_crowned_pigeon_sound",
+        "stream": false
+      }
+    ]
+  },
+  "western_crowned_pigeon_death": {
+    "subtitle": "subtitles.western_crowned_pigeon_death",
+    "sounds": [
+      {
+        "name": "pigeons:western_crowned_pigeon_death",
+        "stream": false
+      }
+    ]
+  },
+  "kereru_sound": {
+    "subtitle": "subtitles.kereru_sound",
+    "sounds": [
+      {
+        "name": "pigeons:kereru",
+        "stream": false
+      }
+    ]
+  },
+  "kereru_death": {
+    "subtitle": "subtitles.kereru_death",
+    "sounds": [
+      {
+        "name": "pigeons:kereru_death",
+        "stream": false
+      }
+    ]
+  },
+  "speckled_pigeon_sound": {
+    "subtitle": "subtitles.speckled_pigeon_sound",
+    "sounds": [
+      {
+        "name": "pigeons:speckled_pigeon_sound",
+        "stream": false
+      }
+    ]
+  },
+  "speckled_death": {
+    "subtitle": "subtitles.speckled_death",
+    "sounds": [
+      {
+        "name": "pigeons:speckled_death",
+        "stream": false
+      }
+    ]
+  },
+  "diamond_dove_voice": {
+    "subtitle": "subtitles.diamond_dove_voice",
+    "sounds": [
+      {
+        "name": "pigeons:diamond_dove_voice",
+        "stream": false
+      }
+    ]
+  },
+  "diamond_dove_death": {
+    "subtitle": "subtitles.diamond_dove_death",
+    "sounds": [
+      {
+        "name": "pigeons:diamod_dove_death",
+        "stream": false
+      }
+    ]
+  },
+  "emerald_dove_sound": {
+    "subtitle": "subtitles.emerald_dove_sound",
+    "sounds": [
+      {
+        "name": "pigeons:emerald_dove_sound",
+        "stream": false
+      }
+    ]
+  },
+  "emerald_dove_death": {
+    "subtitle": "subtitles.emerald_dove_death",
+    "sounds": [
+      {
+        "name": "pigeons:emerald_dove_death",
+        "stream": false
+      }
+    ]
+  },
+  "chick_sound": {
+    "subtitle": "subtitles.chick_sound",
+    "sounds": [
+      {
+        "name": "pigeons:chick",
+        "stream": false
+      }
+    ]
+  }
+}

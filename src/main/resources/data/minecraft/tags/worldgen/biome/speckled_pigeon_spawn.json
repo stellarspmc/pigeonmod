@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "sunflower_plains",
+    {
+      "id": "#minecraft:is_savanna",
+      "required": false
+    },
+    "meadow"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "misc",
+  "experience": 1.2,
+  "cookingtime": 600,
+  "ingredient": {
+    "item": "pigeons:pigeon_meat"
+  },
+  "result": "pigeons:cooked_pigeon_meat"
+}

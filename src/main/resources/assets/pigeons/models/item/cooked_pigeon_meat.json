@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "pigeons:item/cooked_pigeon_meat_kopiia"
+  }
+}

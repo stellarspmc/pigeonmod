@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:is_mountain",
+      "required": false
+    },
+    "windswept_hills",
+    "stony_peaks",
+    "plains",
+    "windswept_savanna",
+    "windswept_gravelly_hills",
+    {
+      "id": "#minecraft:is_taiga",
+      "required": false
+    },
+    "stony_shore"
+  ]
+}

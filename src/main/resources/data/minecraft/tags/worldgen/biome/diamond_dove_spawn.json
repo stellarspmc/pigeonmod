@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:is_savanna",
+      "required": false
+    },
+    "flower_forest",
+    {
+      "id": "#minecraft:is_beach",
+      "required": false
+    },
+    "meadow"
+  ]
+}
