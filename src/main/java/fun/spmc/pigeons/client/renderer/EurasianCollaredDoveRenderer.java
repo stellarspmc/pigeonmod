@@ -1,5 +1,6 @@
 package fun.spmc.pigeons.client.renderer;
 
+import fun.spmc.pigeons.entity.AbstractPigeonEntity;
 import fun.spmc.pigeons.entity.PigeonEntity;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
@@ -12,7 +13,7 @@ public class EurasianCollaredDoveRenderer extends PigeonRenderer {
     }
 
     @Override
-    public @NotNull ResourceLocation getTextureLocation(@NotNull PigeonEntity entity) {
+    public @NotNull ResourceLocation getTextureLocation(@NotNull AbstractPigeonEntity entity) {
         return entity.isBaby() ? ResourceLocation.parse("pigeons:textures/entities/pigeon_child_texture.png") : ResourceLocation.parse("pigeons:textures/entities/eurasian_collared_dove_texture.png");
     }
 }

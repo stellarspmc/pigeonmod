@@ -1,45 +1,45 @@
 {
-  "common_pigeon_cooing": {
-    "subtitle": "subtitles.common_pigeon_cooing",
+  "pigeon_coo": {
+    "subtitle": "subtitles.pigeon_coo",
     "sounds": [
       {
-        "name": "pigeons:pigeon_sound",
+        "name": "pigeons:pigeon_coo",
         "stream": false
       }
     ]
   },
-  "common_pigeon_death": {
-    "subtitle": "subtitles.common_pigeon_death",
+  "pigeon_death": {
+    "subtitle": "subtitles.pigeon_death",
     "sounds": [
       {
-        "name": "pigeons:pigeon_death_sound",
+        "name": "pigeons:pigeon_death",
         "stream": false
       }
     ]
   },
-  "wood_pigeon_sound": {
-    "subtitle": "subtitles.wood_pigeon_sound",
+  "wood_pigeon_coo": {
+    "subtitle": "subtitles.wood_pigeon_coo",
     "sounds": [
       {
-        "name": "pigeons:wood_pigeon_sound",
+        "name": "pigeons:wood_pigeon_coo",
         "stream": false
       }
     ]
   },
-  "ecd_sound": {
-    "subtitle": "subtitles.ecd_sound",
+  "ecd_coo": {
+    "subtitle": "subtitles.ecd_coo",
     "sounds": [
       {
-        "name": "pigeons:eurasian_collared_dove_sound",
+        "name": "pigeons:ecd_coo",
         "stream": false
       }
     ]
   },
-  "mourning_dove_sound": {
-    "subtitle": "subtitles.mourning_dove_sound",
+  "mourning_dove_coo": {
+    "subtitle": "subtitles.mourning_dove_coo",
     "sounds": [
       {
-        "name": "pigeons:mourning_pigeon_sound",
+        "name": "pigeons:mourning_dove_coo",
         "stream": false
       }
     ]
@@ -48,34 +48,34 @@
     "subtitle": "subtitles.mourning_dove_death",
     "sounds": [
       {
-        "name": "pigeons:mourning_pigeon_death",
+        "name": "pigeons:mourning_dove_death",
         "stream": false
       }
     ]
   },
-  "western_crowned_pigeon_sound": {
-    "subtitle": "subtitles.western_crowned_pigeon_sound",
+  "wcp_coo": {
+    "subtitle": "subtitles.wcp_coo",
     "sounds": [
       {
-        "name": "pigeons:western_crowned_pigeon_sound",
+        "name": "pigeons:wcp_coo",
         "stream": false
       }
     ]
   },
-  "western_crowned_pigeon_death": {
-    "subtitle": "subtitles.western_crowned_pigeon_death",
+  "wcp_death": {
+    "subtitle": "subtitles.wcp_death",
     "sounds": [
       {
-        "name": "pigeons:western_crowned_pigeon_death",
+        "name": "pigeons:wcp_death",
         "stream": false
       }
     ]
   },
-  "kereru_sound": {
-    "subtitle": "subtitles.kereru_sound",
+  "kereru_coo": {
+    "subtitle": "subtitles.kereru_coo",
     "sounds": [
       {
-        "name": "pigeons:kereru",
+        "name": "pigeons:kereru_coo",
         "stream": false
       }
     ]
@@ -89,29 +89,29 @@
       }
     ]
   },
-  "speckled_pigeon_sound": {
-    "subtitle": "subtitles.speckled_pigeon_sound",
+  "speckled_pigeon_coo": {
+    "subtitle": "subtitles.speckled_pigeon_coo",
     "sounds": [
       {
-        "name": "pigeons:speckled_pigeon_sound",
+        "name": "pigeons:speckled_pigeon_coo",
         "stream": false
       }
     ]
   },
-  "speckled_death": {
-    "subtitle": "subtitles.speckled_death",
+  "speckled_pigeon_death": {
+    "subtitle": "subtitles.speckled_pigeon_death",
     "sounds": [
       {
-        "name": "pigeons:speckled_death",
+        "name": "pigeons:speckled_pigeon_death",
         "stream": false
       }
     ]
   },
-  "diamond_dove_voice": {
-    "subtitle": "subtitles.diamond_dove_voice",
+  "diamond_dove_coo": {
+    "subtitle": "subtitles.diamond_dove_coo",
     "sounds": [
       {
-        "name": "pigeons:diamond_dove_voice",
+        "name": "pigeons:diamond_dove_coo",
         "stream": false
       }
     ]
@@ -125,11 +125,11 @@
       }
     ]
   },
-  "emerald_dove_sound": {
-    "subtitle": "subtitles.emerald_dove_sound",
+  "emerald_dove_coo": {
+    "subtitle": "subtitles.emerald_dove_coo",
     "sounds": [
       {
-        "name": "pigeons:emerald_dove_sound",
+        "name": "pigeons:emerald_dove_coo",
         "stream": false
       }
     ]
@@ -143,11 +143,11 @@
       }
     ]
   },
-  "chick_sound": {
-    "subtitle": "subtitles.chick_sound",
+  "child_pigeon_coo": {
+    "subtitle": "subtitles.child_pigeon_coo",
     "sounds": [
       {
-        "name": "pigeons:chick",
+        "name": "pigeons:child_pigeon_coo",
         "stream": false
       }
     ]

@@ -4,6 +4,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import fun.spmc.pigeons.client.model.anim.PigeonFlyingAnimation;
 import fun.spmc.pigeons.client.model.anim.PigeonWalkingAnimation;
+import fun.spmc.pigeons.entity.AbstractPigeonEntity;
 import fun.spmc.pigeons.entity.PigeonEntity;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.HierarchicalModel;
@@ -73,7 +74,7 @@ public class PigeonModel<T extends Entity> extends EntityModel<T> {
         @Override
         public void setupAnim(@NotNull T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             this.root().getAllParts().forEach(ModelPart::resetPose);
-            this.animate(((PigeonEntity)entity).animationState0, PigeonFlyingAnimation.flying, ageInTicks, 1.0F);
+            this.animate(((AbstractPigeonEntity)entity).animationState0, PigeonFlyingAnimation.FLYING, ageInTicks, 1.0F);
             this.animateWalk(PigeonWalkingAnimation.WALKING, limbSwing, limbSwingAmount, 4.0F, 2.0F);
         }
     };

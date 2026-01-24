@@ -24,8 +24,6 @@ public class PigeonsModTabs {
             output.accept(PigeonsModItems.SPECKLED_PIGEON_SPAWN_EGG.get());
             output.accept(PigeonsModItems.DIAMOND_DOVE_SPAWN_EGG.get());
             output.accept(PigeonsModItems.EMERALD_DOVE_SPAWN_EGG.get());
-            output.accept(PigeonsModItems.PIGEON_MEAT.get());
-            output.accept(PigeonsModItems.COOKED_PIGEON_MEAT.get());
         }).build());
     }
 }

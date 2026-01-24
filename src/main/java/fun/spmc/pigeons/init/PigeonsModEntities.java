@@ -5,7 +5,10 @@ import fun.spmc.pigeons.entity.*;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
@@ -31,18 +34,29 @@ public class PigeonsModEntities {
         return REGISTRY.register(regName, () -> entityTypeBuilder.build(regName));
     }
 
+    private static AttributeSupplier pigeonAttribute() {
+        AttributeSupplier.Builder builder = Mob.createMobAttributes();
+        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
+        builder = builder.add(Attributes.MAX_HEALTH, 6.0F);
+        builder = builder.add(Attributes.ARMOR, 0.0F);
+        builder = builder.add(Attributes.ATTACK_DAMAGE, 3.0F);
+        builder = builder.add(Attributes.FOLLOW_RANGE, 16.0F);
+        builder = builder.add(Attributes.FLYING_SPEED, 0.3);
+        return builder.build();
+    }
+
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
-        event.put(PIGEON.get(), PigeonEntity.createMobAttributes().build());
-        event.put(WOOD_PIGEON.get(), WoodPigeonEntity.createMobAttributes().build());
-        event.put(EURASIAN_COLLARED_DOVE.get(), EurasianCollaredDoveEntity.createMobAttributes().build());
-        event.put(MOURNING_DOVE.get(), MourningDoveEntity.createMobAttributes().build());
-        event.put(WESTERN_CROWNED_PIGEON.get(), WesternCrownedPigeonEntity.createMobAttributes().build());
-        event.put(KERERU.get(), KereruEntity.createMobAttributes().build());
-        event.put(SPECKLED_PIGEON.get(), SpeckledPigeonEntity.createMobAttributes().build());
-        event.put(ARCHANGEL_PIGEON.get(), ArchangelPigeonEntity.createMobAttributes().build());
-        event.put(DIAMOND_DOVE.get(), DiamondDoveEntity.createMobAttributes().build());
-        event.put(EMERALD_DOVE.get(), EmeraldDoveEntity.createMobAttributes().build());
+        event.put(PIGEON.get(), pigeonAttribute());
+        event.put(WOOD_PIGEON.get(), pigeonAttribute());
+        event.put(EURASIAN_COLLARED_DOVE.get(), pigeonAttribute());
+        event.put(MOURNING_DOVE.get(), pigeonAttribute());
+        event.put(WESTERN_CROWNED_PIGEON.get(), pigeonAttribute());
+        event.put(KERERU.get(), pigeonAttribute());
+        event.put(SPECKLED_PIGEON.get(), pigeonAttribute());
+        event.put(ARCHANGEL_PIGEON.get(), pigeonAttribute());
+        event.put(DIAMOND_DOVE.get(), pigeonAttribute());
+        event.put(EMERALD_DOVE.get(), pigeonAttribute());
     }
 
     static {

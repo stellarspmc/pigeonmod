@@ -6,10 +6,10 @@ import net.minecraft.client.animation.Keyframe;
 import net.minecraft.client.animation.KeyframeAnimations;
 
 public class PigeonFlyingAnimation {
-    public static final AnimationDefinition flying;
+    public static final AnimationDefinition FLYING;
 
     static {
-        flying = AnimationDefinition.Builder.withLength(0.3333F).looping()
+        FLYING = AnimationDefinition.Builder.withLength(0.3333F).looping()
                 .addAnimation("LWing", new AnimationChannel(AnimationChannel.Targets.ROTATION,
                         new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
                         new Keyframe(0.1667F, KeyframeAnimations.degreeVec(0.0F, 0.0F, -130.0F), AnimationChannel.Interpolations.LINEAR),

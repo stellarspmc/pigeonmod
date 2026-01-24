@@ -4,7 +4,6 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import fun.spmc.pigeons.client.model.PigeonChildModel;
 import fun.spmc.pigeons.client.model.PigeonModel;
 import fun.spmc.pigeons.client.model.WesternCrownedPigeonModel;
-import fun.spmc.pigeons.entity.KereruEntity;
 import fun.spmc.pigeons.entity.WesternCrownedPigeonEntity;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
