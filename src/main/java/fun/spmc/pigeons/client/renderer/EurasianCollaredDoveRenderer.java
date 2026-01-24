@@ -1,7 +1,6 @@
 package fun.spmc.pigeons.client.renderer;
 
 import fun.spmc.pigeons.entity.AbstractPigeonEntity;
-import fun.spmc.pigeons.entity.PigeonEntity;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
