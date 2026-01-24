@@ -8,6 +8,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
@@ -25,6 +26,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.event.EventHooks;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -70,9 +72,15 @@ public class AbstractPigeonEntity extends TamableAnimal {
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.2));
         this.goalSelector.addGoal(2, new BreedGoal(this, .7));
-        this.goalSelector.addGoal(3, new TemptGoal(this, 1, item -> item.is(ItemTags.CHICKEN_FOOD), false));
-        this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.1));
-        this.goalSelector.addGoal(5, new RandomStrollGoal(this, 0.8F));
+        this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.8, 20) {
+            protected Vec3 getPosition() {
+                RandomSource random = this.mob.getRandom();
+                double randomMovement = (random.nextFloat() * 2.0F - 1.0F) * 16.0F;
+                return new Vec3(this.mob.getX() + randomMovement, this.mob.getY() + randomMovement, this.mob.getZ() + randomMovement);
+            }
+        });
+        this.goalSelector.addGoal(4, new TemptGoal(this, 1, item -> item.is(ItemTags.CHICKEN_FOOD), false));
+        this.goalSelector.addGoal(5, new FollowParentGoal(this, 1.1));
         this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
         this.goalSelector.addGoal(7, new LeapAtTargetGoal(this, 0.7F));
     }
