@@ -1,9 +1,9 @@
 {
-  "type": "forge:add_spawns",
-  "biomes": "#minecraft:wood_pigeon_spawn",
+  "type": "neoforge:add_spawns",
+  "biomes": "#pigeons:wood_pigeon_spawn",
   "spawners": {
     "type": "pigeons:wood_pigeon",
-    "weight": 100,
+    "weight": 15,
     "minCount": 2,
     "maxCount": 3
   }

@@ -28,7 +28,7 @@ public class PigeonSoundEvents {
 
     static {
         REGISTRY = DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, "pigeons");
-        PIGEON_COO = REGISTRY.register("pigeon_cooing", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("pigeons", "pigeon_cooing")));
+        PIGEON_COO = REGISTRY.register("pigeon_coo", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("pigeons", "pigeon_coo")));
         PIGEON_DEATH = REGISTRY.register("pigeon_death", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("pigeons", "pigeon_death")));
         WOOD_PIGEON_COO = REGISTRY.register("wood_pigeon_coo", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("pigeons", "wood_pigeon_coo")));
         ECD_COO = REGISTRY.register("ecd_coo", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("pigeons", "ecd_coo")));

@@ -1,9 +1,9 @@
 {
-  "type": "forge:add_spawns",
-  "biomes": "#minecraft:ecd_spawn",
+  "type": "neoforge:add_spawns",
+  "biomes": "#pigeons:ecd_spawn",
   "spawners": {
     "type": "pigeons:eurasian_collared_dove",
-    "weight": 100,
+    "weight": 15,
     "minCount": 2,
     "maxCount": 3
   }
