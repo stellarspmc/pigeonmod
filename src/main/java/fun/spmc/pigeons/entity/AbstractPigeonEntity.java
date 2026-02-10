@@ -33,6 +33,7 @@ import net.neoforged.neoforge.event.EventHooks;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.EnumSet;
 import java.util.Objects;
 
 public class AbstractPigeonEntity extends TamableAnimal implements FlyingAnimal {
@@ -72,7 +73,7 @@ public class AbstractPigeonEntity extends TamableAnimal implements FlyingAnimal 
         this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, 8));
         this.goalSelector.addGoal(1, new TemptGoal(this, 1f, this::isFood, false));
         this.goalSelector.addGoal(1, new BreedGoal(this, 1f));
-        this.goalSelector.addGoal(2, new SitWhenOrderedToGoal(this));
+        this.goalSelector.addGoal(2, new PigeonSitWhenOrderedToGoal(this));
         this.goalSelector.addGoal(2, new FollowOwnerGoal(this, 1, 5, 1));
         this.goalSelector.addGoal(2, new PigeonWanderGoal(this, 1));
         this.goalSelector.addGoal(3, new FollowMobGoal(this, 1, 3, 7));
@@ -128,7 +129,7 @@ public class AbstractPigeonEntity extends TamableAnimal implements FlyingAnimal 
                 return InteractionResult.sidedSuccess(this.level().isClientSide);
             } else return super.mobInteract(sourceEntity, hand);
         } else if (!stack.is(Items.BREAD) || !stack.is(Items.COOKIE)) {
-            if (!this.isFlying() && this.isTame() && this.isOwnedBy(sourceEntity)) {
+            if (this.isTame() && this.isOwnedBy(sourceEntity)) {
                 if (!this.level().isClientSide) this.setOrderedToSit(!this.isOrderedToSit());
                 return InteractionResult.sidedSuccess(this.level().isClientSide);
             } else return super.mobInteract(sourceEntity, hand);
@@ -185,14 +186,8 @@ public class AbstractPigeonEntity extends TamableAnimal implements FlyingAnimal 
         @javax.annotation.Nullable
         protected Vec3 getPosition() {
             Vec3 vec3 = null;
-            if (this.mob.isInWater()) {
-                vec3 = LandRandomPos.getPos(this.mob, 15, 15);
-            }
-
-            if (this.mob.getRandom().nextFloat() >= this.probability) {
-                vec3 = this.getTreePos();
-            }
-
+            if (this.mob.isInWater()) vec3 = LandRandomPos.getPos(this.mob, 10, 5);
+            if (this.mob.getRandom().nextFloat() >= this.probability) vec3 = this.getTreePos();
             return vec3 == null ? super.getPosition() : vec3;
         }
 
@@ -206,13 +201,43 @@ public class AbstractPigeonEntity extends TamableAnimal implements FlyingAnimal 
                 if (!blockpos.equals(blockPos1)) {
                     BlockState blockstate = this.mob.level().getBlockState(blockPos.setWithOffset(blockPos1, Direction.DOWN));
                     boolean flag = blockstate.getBlock() instanceof LeavesBlock || blockstate.is(BlockTags.LOGS);
-                    if (flag && this.mob.level().isEmptyBlock(blockPos1) && this.mob.level().isEmptyBlock(blockpos$mutableblockpos.setWithOffset(blockPos1, Direction.UP))) {
-                        return Vec3.atBottomCenterOf(blockPos1);
-                    }
+                    if (flag && this.mob.level().isEmptyBlock(blockPos1) && this.mob.level().isEmptyBlock(blockpos$mutableblockpos.setWithOffset(blockPos1, Direction.UP))) return Vec3.atBottomCenterOf(blockPos1);
                 }
             }
 
             return null;
+        }
+    }
+
+    static class PigeonSitWhenOrderedToGoal extends Goal {
+        private final AbstractPigeonEntity mob;
+
+        public PigeonSitWhenOrderedToGoal(AbstractPigeonEntity mob) {
+            this.mob = mob;
+            this.setFlags(EnumSet.of(Flag.JUMP, Flag.MOVE));
+        }
+
+        public boolean canContinueToUse() {
+            return this.mob.isOrderedToSit();
+        }
+
+        public boolean canUse() {
+            if (!this.mob.isTame()) return false;
+            else if (this.mob.isInWaterOrBubble()) return false;
+            else {
+                LivingEntity livingentity = this.mob.getOwner();
+                if (livingentity == null) return true;
+                else return (!(this.mob.distanceToSqr(livingentity) < (double) 144.0F) || livingentity.getLastHurtByMob() == null) && this.mob.isOrderedToSit();
+            }
+        }
+
+        public void start() {
+            this.mob.getNavigation().stop();
+            this.mob.setInSittingPose(true);
+        }
+
+        public void stop() {
+            this.mob.setInSittingPose(false);
         }
     }
 }
