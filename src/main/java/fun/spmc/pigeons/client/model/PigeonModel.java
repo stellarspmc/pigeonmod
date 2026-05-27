@@ -5,7 +5,6 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import fun.spmc.pigeons.client.model.anim.PigeonFlyingAnimation;
 import fun.spmc.pigeons.client.model.anim.PigeonWalkingAnimation;
 import fun.spmc.pigeons.entity.AbstractPigeonEntity;
-import fun.spmc.pigeons.entity.PigeonEntity;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
